@@ -1,7 +1,7 @@
 {
     "id": 2,
     "title": "How are you feeling mentally today?",
-    "type": "Quantative",
+    "type": "Quantitative",
     "hint": null,
     "range": {
         "min": 1,

@@ -8,6 +8,6 @@ export default () => (
         <Button type="primary"><Link to="/entries/new?type=daily">Create a new daily reflection entry</Link></Button>
         <br/>
         <br/>
-        <Button type="primary"><Link to="/entries/freeform?type=freeform">Create a new free form entry</Link></Button>
+        <Button type="primary"><Link to="/entries/new?type=freeform">Create a new free form entry</Link></Button>
     </>
 );

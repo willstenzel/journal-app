@@ -4,10 +4,10 @@ export enum EntryType {
 }
 
 export enum BlockType {
-    Header,
-    LongResponse,
-    ShortResponse,
-    Quantative
+    Header = "Header",
+    LongResponse = "LongResponse",
+    ShortResponse = "ShortResponse",
+    Quantative = "Quantative"
 }
 
 export interface Title {

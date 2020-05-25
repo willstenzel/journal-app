@@ -2,7 +2,7 @@ export enum BlockType {
     Header = "Header",
     LongResponse = "LongResponse",
     ShortResponse = "ShortResponse",
-    Quantative = "Quantative"
+    Quantative = "Quantitative"
 }
 
 export interface Title {
@@ -31,14 +31,14 @@ export interface Block {
 export interface EntryTemplate {
     id: number,
     title: string,
-    blocks: [BlockTemplate],
-    enojis: [string],
+    blocks: BlockTemplate[],
+    emojis: string[],
     canUploadPhotos: boolean
 }
 
 export interface Entry {
     template: EntryTemplate,
-    blocks: [Block],
-    emojiSelected: [string],
-    photoLinks: [string]
+    blocks: Block[],
+    emojiSelected: string[],
+    photoLinks: string[]
 }

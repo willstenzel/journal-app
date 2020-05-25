@@ -17,7 +17,7 @@ export interface NumberRange {
 
 export interface BlockTemplate {
     id: number,
-    title: Title,
+    title: string,
     type: BlockType,
     hint: string | null | undefined,
     range: NumberRange | null | undefined
@@ -29,8 +29,8 @@ export interface Block {
 }
 
 export interface EntryTemplate {
-    type: string,
     id: number,
+    title: string,
     blocks: [BlockTemplate],
     enojis: [string],
     canUploadPhotos: boolean

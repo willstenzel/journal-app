@@ -1,7 +1,7 @@
 import { EntryTemplate } from "../../models/types";
 import { MOCK_BLOCK_TEMPLATE_1, MOCK_BLOCK_TEMPLATE_2, MOCK_BLOCK_TEMPLATE_3 } from "../blockTemplates/quantitative"
 
-export function quickDaily(): EntryTemplate {
+export function mockQuickDaily(): EntryTemplate {
     let entry = {
         title: "quick daily",
         id: 1,

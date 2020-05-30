@@ -2,7 +2,7 @@ export enum BlockType {
     Header = "Header",
     LongResponse = "LongResponse",
     ShortResponse = "ShortResponse",
-    Quantative = "Quantitative"
+    Quantitative = "Quantitative"
 }
 
 export interface Title {

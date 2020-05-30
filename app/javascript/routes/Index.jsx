@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../components/Home";
-import NewEntry from "../components/NewEntry";
+import { NewEntry } from "../components/NewEntry";
 
 export default (
   <Router>

@@ -1,17 +1,14 @@
 import { EntryTemplate } from "../../models/types";
-
-let q1 = require("../blockTemplates/quantitative_1");
-let q2 = require("../blockTemplates/quantitative_2");
-let q3 = require("../blockTemplates/quantitative_3");
+import { MOCK_BLOCK_TEMPLATE_1, MOCK_BLOCK_TEMPLATE_2, MOCK_BLOCK_TEMPLATE_3 } from "../blockTemplates/quantitative"
 
 export function quickDaily(): EntryTemplate {
     let entry = {
         title: "quick daily",
         id: 1,
-        blocks: [q1, q2, q3],
+        blocks: [MOCK_BLOCK_TEMPLATE_1, MOCK_BLOCK_TEMPLATE_2, MOCK_BLOCK_TEMPLATE_3],
         emojis: [],
         canUploadPhotos: false
     }
-    
+
     return entry;
 }

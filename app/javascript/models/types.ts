@@ -42,3 +42,9 @@ export interface Entry {
     emojiSelected: string[],
     photoLinks: string[]
 }
+
+export interface TemplateInfo {
+    id: number,
+    name: string,
+    key: string,
+}

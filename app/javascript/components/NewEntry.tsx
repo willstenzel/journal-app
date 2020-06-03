@@ -20,7 +20,7 @@ function getTemplate(type): EntryTemplate {
       return mockFreeForm();
     case 'qualitative':
       return mockQualitative();
-    case 'quanitative':
+    case 'quantitative':
       return mockQuantitative();
     default:
       return mockFreeForm();

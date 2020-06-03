@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 export const Quantitative: React.FC = (props: any) => {
     return (
         <div>
@@ -9,5 +8,4 @@ export const Quantitative: React.FC = (props: any) => {
             <p>{props.range.max}</p>
         </div>
     );
-
 }

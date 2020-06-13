@@ -17,10 +17,21 @@ const Components = {
   LongResponse: LongResponse,
 }
 
-export class NewEntry extends React.Component {
-  state: { response: Entry; template: EntryTemplate; };
+interface NewEntryProps {
 
-  constructor(props) {
+}
+
+interface NewEntryState {
+  response: Entry,
+  template: EntryTemplate
+}
+
+export class NewEntry extends React.Component<NewEntryProps, NewEntryState> {
+
+  state: { response: Entry; template: EntryTemplate; };
+  setState: any;
+  
+  constructor(props: NewEntryProps) {
     super(props);
     const templateType = new URLSearchParams(window.location.search).get("type");
     const template = this.getTemplate(templateType);
@@ -32,6 +43,13 @@ export class NewEntry extends React.Component {
       emojiSelected: [],
       photoLinks: []
     }
+
+    entry.blocks = template.blockTemplates.map( blockTemplate => {
+      return {
+        template: blockTemplate,
+        response: ""
+      }
+    });
 
     this.state = {
       response: entry,
@@ -61,6 +79,7 @@ export class NewEntry extends React.Component {
     if (typeof Components[block.type] !== "undefined") {
       return React.createElement(Components[block.type], {
         key: block.id,
+        handleOnChange: this.handleOnChange.bind(this),
         ...block
       });
     }
@@ -71,13 +90,23 @@ export class NewEntry extends React.Component {
     );
   }
 
-  handleOnChange() {
+  handleOnChange = (blockId: number, input: string | number) => {
+    console.log("Handle On Change " + blockId + " " + input)
+    const responseCopy = {... this.state.response };
+
+    const block = responseCopy.blocks.find(block => block.template.id == blockId);
+    if (block != null) {
+      block.response = input;
+      this.setState({
+        response: responseCopy
+      });
+    }
     
   }
 
   render() {
-    const blockComponents = this.state.template.blocks.map(block => this.blockToComponent(block));
-
+    const blockComponents = this.state.template.blockTemplates.map(block => this.blockToComponent(block));
+    console.log(this.state.response);
     return (
       <div>
         <h4><b>{this.state.template.title}</b></h4>

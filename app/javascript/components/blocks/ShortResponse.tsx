@@ -6,7 +6,8 @@ export const ShortResponse: React.FC = (props: any) => {
     return (
         <div>
             <h4>{props.title}</h4>
-            <TextArea />
+            <TextArea
+                onPressEnter={e => props.handleOnChange(props.id, e.target.value)}/>
         </div>
     );
 }

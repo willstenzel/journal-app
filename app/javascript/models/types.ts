@@ -31,7 +31,7 @@ export interface Block {
 export interface EntryTemplate {
     id: number,
     title: string,
-    blocks: BlockTemplate[],
+    blockTemplates: BlockTemplate[],
     emojis: string[],
     canUploadPhotos: boolean
 }

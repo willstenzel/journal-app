@@ -37,7 +37,8 @@ export interface EntryTemplate {
 }
 
 export interface Entry {
-    template: EntryTemplate,
+    title: string,
+    templateId: number,
     blocks: Block[],
     emojiSelected: string[],
     photoLinks: string[]

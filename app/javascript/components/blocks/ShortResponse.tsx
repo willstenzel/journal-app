@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Input } from "antd";
-const { TextArea } = Input;
+import { BlockTemplate }  from "../../models/types"
+import { Input, Form } from "antd";
 
-export const ShortResponse: React.FC = (props: any) => {
+export const ShortResponse: React.FC = (props: BlockTemplate) => {
     return (
         <div>
             <h4>{props.title}</h4>
-            <TextArea
-                onPressEnter={e => props.handleOnChange(props.id, e.target.value)}/>
+            <Form.Item
+                name={props.id}
+                children={<Input/>}
+            />
         </div>
     );
 }
+

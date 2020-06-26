@@ -25,7 +25,7 @@ export interface BlockTemplate {
 
 export interface Block {
     template: BlockTemplate,
-    response: string | number
+    response: string | number | null
 }
 
 export interface EntryTemplate {

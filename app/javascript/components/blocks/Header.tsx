@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Input } from 'antd';
+import { BlockTemplate }  from "../../models/types"
+import { Input, Form } from "antd";
 
-export const Header: React.FC = (props: any) => {
+export const Header: React.FC = (props: BlockTemplate) => {
     return (
         <div>
             <h1>{props.title}</h1>
-            <Input size="large" placeholder={props.hint} />
+            <Form.Item
+                name={props.id}
+                children={<Input size="large" placeholder={props.hint}/>}
+            />           
         </div>
     );
 }

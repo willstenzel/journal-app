@@ -110,7 +110,25 @@ export class NewEntry extends React.Component<NewEntryProps, NewEntryState> {
   }
 
   onFinish = values => {
-    console.log('Success:', values);
+    const template: EntryTemplate = this.state.template;
+
+    const blocks: Block[] = [];
+    template.blockTemplates.forEach(blockTemplate => {
+      blocks.push({
+        template: blockTemplate,
+        response: values[blockTemplate.id]
+      });
+    });
+
+    const entry: Entry = {
+      title: template.title,
+      templateId: template.id,
+      blocks: blocks,
+      emojiSelected: [],
+      photoLinks: [],
+    };
+    // TODO: Send to server
+    console.log(entry)
   };
 
   render() {

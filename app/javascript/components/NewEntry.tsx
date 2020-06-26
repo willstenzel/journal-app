@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Divider } from "antd";
+import Form from "antd/lib/form/Form";
+import Button from "antd/lib/button/Button";
 import { useLocation } from "react-router-dom";
 import { EntryTemplate, BlockTemplate, Entry, Block } from "../models/types";
 import { mockQuantitative } from "../mocks/entryTemplates/quantitative";
@@ -24,6 +26,10 @@ interface NewEntryProps {
 interface NewEntryState {
   response: Entry,
   template: EntryTemplate
+}
+
+export type WrapperProps = {
+	mainApp: React.ElementType
 }
 
 export class NewEntry extends React.Component<NewEntryProps, NewEntryState> {
@@ -100,18 +106,27 @@ export class NewEntry extends React.Component<NewEntryProps, NewEntryState> {
       this.setState({
         response: responseCopy
       });
-    }
-    
+    }   
   }
+
+  onFinish = values => {
+    console.log('Success:', values);
+  };
 
   render() {
     const blockComponents = this.state.template.blockTemplates.map(block => this.blockToComponent(block));
     console.log(this.state.response);
+
     return (
       <div>
         <h4><b>{this.state.template.title}</b></h4>
         <Divider />
+        <Form
+            onFinish={this.onFinish}
+          >
         {blockComponents}
+        <input type="submit" value="Submit" />
+        </Form>
       </div>
     );
   }

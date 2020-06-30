@@ -3,7 +3,7 @@ import Routes from "../routes/Index";
 import styled from "styled-components";
 
 const App = styled.div`
-    margin: 10px;
+    margin: 0px;
 `;
 
 export default props => <App>{Routes}</App>;

@@ -6,7 +6,7 @@ export const MOCK_BLOCK_TEMPLATE_1: BlockTemplate = {
     "type": BlockType["Quantitative"],
     "hint": null,
     "range": {
-        "min": 1,
+        "min": 0,
         "max": 10
     }
 }
@@ -17,7 +17,7 @@ export const MOCK_BLOCK_TEMPLATE_2: BlockTemplate = {
     "type": BlockType["Quantitative"],
     "hint": null,
     "range": {
-        "min": 1,
+        "min": 0,
         "max": 10
     }
 }
@@ -28,7 +28,7 @@ export const MOCK_BLOCK_TEMPLATE_3: BlockTemplate = {
     "type": BlockType["Quantitative"],
     "hint": null,
     "range": {
-        "min": 1,
+        "min": 0,
         "max": 10
     }
 }

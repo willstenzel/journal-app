@@ -1,4 +1,7 @@
 # Setup
+
+Make sure to have PostgreSQL installed for the backend.
+
 ``` bash
 bundle install
 ```

@@ -20,7 +20,6 @@ const Components = {
 }
 
 interface NewEntryProps {
-
 }
 
 interface NewEntryState {

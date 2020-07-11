@@ -4,7 +4,7 @@ class CreateEntries < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :contents
       t.text :emojis
-      t.datetimes
+      t.timestamps
     end
   end
 end

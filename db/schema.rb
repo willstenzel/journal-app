@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 2020_07_11_032437) do
 
   create_table "questions", force: :cascade do |t|
     t.string "title"
-    t.integer "type"
-    t.bigint "entry_templates_id"
+    t.integer "question_type"
+    t.bigint "entry_template_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["entry_templates_id"], name: "index_questions_on_entry_templates_id"
+    t.index ["entry_template_id"], name: "index_questions_on_entry_template_id"
   end
 
   create_table "users", force: :cascade do |t|

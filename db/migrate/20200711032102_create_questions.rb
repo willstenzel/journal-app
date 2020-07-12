@@ -3,7 +3,7 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
     create_table :questions do |t|
       t.string :title
       t.integer :type
-      t.reference :entry_templates
+      t.references :entry_templates
       t.timestamps
     end
   end

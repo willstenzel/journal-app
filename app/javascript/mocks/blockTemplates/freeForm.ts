@@ -1,5 +1,6 @@
 import { BlockTemplate, BlockType } from '../../models/types';
 
+// Q: Do we still need this header block template if every entry is going going to have a title?
 export const MOCK_BLOCK_TEMPLATE_1: BlockTemplate = {
     "id": 4,
     "title": "Title",

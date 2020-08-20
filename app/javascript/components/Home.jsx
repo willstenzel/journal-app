@@ -37,6 +37,7 @@ export default () => {
     return (
         <Container>
             <Title>Home</Title>
+            <a href="admins/sign_out">Sign Out</a>
             <Line/>
             <ContentContainer>
                 {templatesList.map((template) => (

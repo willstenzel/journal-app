@@ -61,5 +61,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   ENV['GOOGLE_OAUTH_CLIENT_ID'] = '546938814385-0u380i9jijpdd9be6dj759ea1v4q2n24.apps.googleusercontent.com'
+  # TODO: Make this actually secret when we deploy
   ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '2eKS3GiJofGKUkFykXCPY0OE'
 end

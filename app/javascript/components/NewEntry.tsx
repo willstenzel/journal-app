@@ -56,7 +56,14 @@ const onFinish = (values, template) => {
     photoLinks: [],
   };
   // TODO: Send to server
-  console.log(entry)
+  console.log(entry);
+  // POST to server
+  const jsonMsg = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(entry)
+  };
+  fetch('/entry', jsonMsg);
 };
 
 function getTemplate(type): EntryTemplate {

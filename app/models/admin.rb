@@ -8,6 +8,6 @@ class Admin < ApplicationRecord
 
   def self.from_google(email:, full_name:, uid:, avatar_url:)
     require 'securerandom'
-    create_with(uid: uid, full_name: full_name, avatar_url: avatar_url).find_or_create_by!(email: email, password: SecureRandom.urlsafe_base64)
+    create_with(uid: uid, full_name: full_name, avatar_url: avatar_url).find_or_create_by!(provider: auth[:provider], email: email, password: SecureRandom.urlsafe_base64)
   end
 end
